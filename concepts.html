@@ -4,16 +4,16 @@
 </HEAD>
 
 <A HREF="contents.html">
-<IMG ALT="[Contents]" SRC="http://www.alu.org/img/Contents.gif" ALIGN=Bottom></A>
+<IMG ALT="[Contents]" SRC="img/Contents.gif" ALIGN=Bottom></A>
 
 <A REL=PREV HREF="contents.html">
-<IMG ALT="[Previous]" SRC="http://www.alu.org/img/Prev.gif" ALIGN=Bottom></A>
+<IMG ALT="[Previous]" SRC="img/Prev.gif" ALIGN=Bottom></A>
 
 <A REL=UP HREF="index.html">
-<IMG ALT="[Up]" SRC="http://www.alu.org/img/Up.gif" ALIGN=Bottom></A>
+<IMG ALT="[Up]" SRC="img/Up.gif" ALIGN=Bottom></A>
 
 <A REL=NEXT HREF="dictionary.html">
-<IMG ALT="[Next]" SRC="http://www.alu.org/img/Next.gif" ALIGN=Bottom></A>
+<IMG ALT="[Next]" SRC="img/Next.gif" ALIGN=Bottom></A>
 <hr>
 
 <p><h1><a name="spec1"></a>Concepts</h1>
@@ -220,7 +220,7 @@ specializer metaobject is used for <b>eql</b> specializers.
 <p>A <em>method combination metaobject</em> represents the information about the
 method combination being used by a generic function.
 
-<p><blockquote> <b>Note:</b> 
+<p><blockquote> <b>Note:</b>
 This document does not specify the structure of method combination
 metaobjects.
 </blockquote>
@@ -451,7 +451,7 @@ as well.
 metaobject classes must be defined before any instances of those classes (or
 any subclasses) are created, either directly or indirectly by a call to <a href="dictionary.html#make-instance"><b>make-instance</b></a>.  Methods can be defined after instances are created by <a href="dictionary.html#allocate-instance"><b>allocate-instance</b></a> however.  Portable metaobject classes cannot be redefined.
 
-<p><blockquote><b>Implementation Note:</b> 
+<p><blockquote><b>Implementation Note:</b>
 The purpose of this last restriction is to permit implementations to provide
 performance optimizations by analyzing, at the time the first instance of a
 metaobject class is initialized, what portable methods will be applicable to
@@ -459,7 +459,7 @@ it.  This can make it possible to optimize calls to those specified generic
 functions which would have no applicable portable methods.
 </blockquote>
 
-<p><blockquote> <b>Note:</b> 
+<p><blockquote> <b>Note:</b>
 The specification technology used in this document needs further development.
 The concepts of object-oriented protocols and subclass specialization are
 intuitively familiar to programmers of object-oriented systems; the protocols
@@ -580,7 +580,7 @@ result in the proper call to <a href="dictionary.html#ensure-class"><b>ensure-cl
 <caption>
 <a name="defclass2"><b>Figure 2:</b> A <b>defclass</b> form with
 non-standard class and slot options, and an expansion of it which
-results in the proper call to <a href="dictionary.html#ensure-class"><b>ensure-class</b></a>.  
+results in the proper call to <a href="dictionary.html#ensure-class"><b>ensure-class</b></a>.
 <br>Note that the
 order of the slot options has not affected the order of the properties
 in the canonicalized slot specification, but has affected the order of
@@ -615,7 +615,7 @@ derived from the <b>defclass</b> form in a defined way.  The exact
 macro-expansion of the <b>defclass</b> form is not defined, only the
 relationship between the arguments to the <b>defclass</b> macro and the
 arguments received by the <a href="dictionary.html#ensure-class"><b>ensure-class</b></a> function.  Examples of typical
-<b>defclass</b> forms and sample expansions are shown in 
+<b>defclass</b> forms and sample expansions are shown in
 <a href="concepts.html#defclass1">Figure 1</a> and <a href="concepts.html#defclass2">Figure 2</a>.
 
 <p><ul>
@@ -803,7 +803,7 @@ evaluating or executing the <b>defmethod</b> form.
 <p><table border=yes>
 <caption>
 <a name="defmethod1"><b>Figure 3:</b></a> An example <b>defmethod</b>
-form and one possible correct expansion.  <br> 
+form and one possible correct expansion.  <br>
 In the expansion,
 <em>method-lambda</em> is the result of calling
 <a href="dictionary.html#make-method-lambda"><b>make-method-lambda</b></a> as described in the section <a
@@ -842,7 +842,7 @@ method is shown in <a href="concepts.html#defmethod2">Figure 4</a>.
 must be converted to a method function.  This conversion is a two step
 process.
 
-<p><blockquote> <b>Note:</b> 
+<p><blockquote> <b>Note:</b>
 The body of methods can also appear in the <b>:initial-methods</b> option of
 <b>defgeneric</b> forms.  Initial methods are not considered by any of the
 protocols specified in this document.

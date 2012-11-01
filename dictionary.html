@@ -4,16 +4,16 @@
 </HEAD>
 
 <A HREF="contents.html">
-<IMG ALT="[Contents]" SRC="http://www.alu.org/img/Contents.gif" ALIGN=Bottom></A>
+<IMG ALT="[Contents]" SRC="Contents.gif" ALIGN=Bottom></A>
 
 <A REL=PREV HREF="concepts.html">
-<IMG ALT="[Previous]" SRC="http://www.alu.org/img/Prev.gif" ALIGN=Bottom></A>
+<IMG ALT="[Previous]" SRC="img/Prev.gif" ALIGN=Bottom></A>
 
 <A REL=UP HREF="index.html">
-<IMG ALT="[Up]" SRC="http://www.alu.org/img/Up.gif" ALIGN=Bottom></A>
+<IMG ALT="[Up]" SRC="img/Up.gif" ALIGN=Bottom></A>
 
 <A REL=NEXT HREF="admin.html">
-<IMG ALT="[Next]" SRC="http://www.alu.org/img/Next.gif" ALIGN=Bottom></A>
+<IMG ALT="[Next]" SRC="img/Next.gif" ALIGN=Bottom></A>
 <hr>
 
 <p><h1><a name="spec2"></a>Generic Functions and Methods Dictionary</h1>
@@ -71,21 +71,21 @@ method with the signature shown above is written as:  <b>gf1 (class t)</b>.
 
 <hr><a name="add-dependent"><i>Generic Function</i> <a href="dictionary.html#add-dependent"><b>add-dependent</b></a></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#add-dependent"><b>add-dependent</b></a> <i>metaobject dependent</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>metaobject</i> argument is a class or generic function metaobject.
 
 <p>The <i>dependent</i> argument is an object.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned by this generic function is unspecified.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function adds <i>dependent</i> to the dependents of <i>metaobject</i>.  If <i>dependent</i> is already in the set of dependents it is not
 added again (no error is signaled).
@@ -98,7 +98,7 @@ unspecified.
 
 <p>The situations in which <a href="dictionary.html#add-dependent"><b>add-dependent</b></a> is called are not specified.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#add-dependent"><b>add-dependent</b></a> (<i>class</i> standard-class) <i>dependent</i>
 
@@ -139,7 +139,7 @@ overridden as well:
 <b>map-dependents (standard-generic-function t)</b>
 </blockquote>
 
-<p><b>Notes:</b> 
+<p><b>Notes:</b>
 
 <p>See the ``Dependent Maintenance Protocol'' section for remarks about the use
 of this facility.
@@ -148,21 +148,21 @@ of this facility.
 
 <hr><a name="add-direct-method"><i>Generic Function</i> <a href="dictionary.html#add-direct-method"><b>add-direct-method</b></a></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#add-direct-method"><b>add-direct-method</b></a> <i>specializer method</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>specializer</i> argument is a specializer metaobject.
 
 <p>The <i>method</i> argument is a method metaobject.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned by this generic function is unspecified.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function is called to maintain a set of backpointers from a
 specializer to the set of methods specialized to it.  If <i>method</i> is
@@ -179,7 +179,7 @@ will be called more than once with the same specializer as argument.
 <p>The results are undefined if the <i>specializer</i> argument is not one of the
 specializers of the <i>method</i> argument.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#add-direct-method"><b>add-direct-method</b></a> (<i>specializer</i> class)
                                (<i>method</i> method)
@@ -208,21 +208,21 @@ specified for the generic function.
 
 <hr><a name="add-direct-subclass"><i>Generic Function</i> <b>add-direct-subclass</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#add-direct-subclass"><b>add-direct-subclass</b></a> <i>superclass subclass</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>superclass</i> argument is a class metaobject.
 
 <p>The <i>subclass</i> argument is a class metaobject.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned by this generic function is unspecified.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function is called to maintain a set of backpointers from a class
 to its direct subclasses.  This generic function adds <i>subclass</i> to the
@@ -235,7 +235,7 @@ direct superclass of the class.
 added direct superclass of the class.  The generic function <a href="dictionary.html#remove-direct-subclass"><b>remove-direct-subclass</b></a> is called once for each deleted direct superclass of
 the class.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#add-direct-subclass"><b>add-direct-subclass</b></a> (<i>superclass</i> class)
                                  (<i>subclass</i> class)
@@ -255,21 +255,21 @@ as well:
 
 <hr><a name="add-method"><i>Generic Function</i> <b>add-method</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#add-method"><b>add-method</b></a> <i>generic-function method</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>generic-function</i> argument is a generic function metaobject.
 
 <p>The <i>method</i> argument is a method metaobject.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The <i>generic-function</i> argument is returned.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function associates an unattached method with a generic function.
 
@@ -293,7 +293,7 @@ generic function.
 <p>The generic function <a href="dictionary.html#add-method"><b>add-method</b></a> can be called by the user or the
 implementation.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#add-method"><b>add-method</b></a> (<i>generic-function</i> standard-generic-function)
                         (<i>method</i> standard-method)
@@ -305,22 +305,22 @@ the generic function.
 
 <hr><a name="allocate-instance"><i>Generic Function</i> <a href="dictionary.html#allocate-instance"><b>allocate-instance</b></a></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#allocate-instance"><b>allocate-instance</b></a> <i>class <b><tt>&amp;rest</tt></b> <i>initargs</i></i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>class</i> argument is a class metaobject.
 
 <p>The <i>initargs</i> argument consists of alternating initialization argument
 names and values.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned is a newly allocated instance of <i>class</i>.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function is called to create a new, uninitialized instance of a
 class.  The interpretation of the concept of an ``uninitialized'' instance
@@ -331,7 +331,7 @@ see if <i>class</i> has been finalized.  If it has not been finalized,
 <a href="dictionary.html#finalize-inheritance"><b>finalize-inheritance</b></a> is called before the new instance is
 allocated.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#allocate-instance"><b>allocate-instance</b></a>
          (<i>class</i> standard-class) <b><tt>&amp;rest</tt></b> <i>initargs</i>
@@ -371,21 +371,21 @@ instance function.
 
 <hr><a name="compute-applicable-methods"><i>Generic Function</i> <a href="dictionary.html#compute-applicable-methods"><b>compute-applicable-methods</b></a></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#compute-applicable-methods"><b>compute-applicable-methods</b></a> <i>generic-function arguments</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>generic-function</i> argument is a generic function metaobject.
 
 <p>The <i>arguments</i> argument is a list of objects.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>This generic function returns a possibly empty list of method metaobjects.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function determines the method applicability of a generic
 function given a list of required arguments.  The returned list of method
@@ -408,7 +408,7 @@ fewer elements than the generic function accepts required arguments.
 implementation.  The results are undefined if a portable program mutates the
 list returned by this generic function.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#compute-applicable-methods"><b>compute-applicable-methods</b></a>
          (<i>generic-function</i> standard-generic-function)
@@ -432,22 +432,22 @@ also overriding <b>compute-applicable-methods-using-classes
 
 <hr><a name="compute-applicable-methods-using-classes"><i>Generic Function</i> <a href="dictionary.html#compute-applicable-methods-using-classes"><b>compute-applicable-methods-using-classes</b></a></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#compute-applicable-methods-using-classes"><b>compute-applicable-methods-using-classes</b></a> <i>generic-function classes</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>generic-function</i> argument is a generic function metaobject.
 
 <p>The <i>classes</i> argument is a list of class metaobjects.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>This generic function returns two values.  The first is a possibly empty
 list of method metaobjects.  The second is either true or false.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function is called to attempt to determine the method
 applicability of a generic function given only the classes of the required
@@ -484,7 +484,7 @@ generic functions causes this consistency to be violated.
 implementation.  The results are undefined if a portable program mutates the
 list returned by this generic function.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#compute-applicable-methods-using-classes"><b>compute-applicable-methods-using-classes</b></a>
          (<i>generic-function</i> standard-generic-function)
@@ -508,7 +508,7 @@ this generic function and <a href="dictionary.html#compute-applicable-methods"><
 require also overriding
 <b>compute-applicable-methods (standard-generic-function t)</b>.
 
-<p><b>Notes:</b> 
+<p><b>Notes:</b>
 
 <p>This generic function exists to allow user extensions which alter method
 lookup rules, but which base the new rules only on the classes of the required
@@ -531,19 +531,19 @@ which implement their own memoization scheme.
 
 <hr><a name="compute-class-precedence-list"><i>Generic Function</i> <a href="dictionary.html#compute-class-precedence-list"><b>compute-class-precedence-list</b></a></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#compute-class-precedence-list"><b>compute-class-precedence-list</b></a> <i>class</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>class</i> argument is a class metaobject.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned by this generic function is a list of class metaobjects.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic-function is called to determine the class precedence list of a
 class.
@@ -565,7 +565,7 @@ The value can then be accessed by calling <b>class-precedence-list</b>.
 implementation.  The results are undefined if a portable program mutates the
 list returned by this generic function.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#compute-class-precedence-list"><b>compute-class-precedence-list</b></a> (<i>class</i> class)
 
@@ -582,20 +582,20 @@ forward referenced class.
 
 <hr><a name="compute-default-initargs"><i>Generic Function</i> <a href="dictionary.html#compute-default-initargs"><b>compute-default-initargs</b></a></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#compute-default-initargs"><b>compute-default-initargs</b></a> <i>class</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>class</i> argument is a class metaobject.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned by this generic function is a list of canonicalized default
 initialization arguments.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic-function is called to determine the default initialization
 arguments for a class.
@@ -617,7 +617,7 @@ value can then be accessed by calling <b>class-default-initargs</b>.
 implementation.  The results are undefined if a portable program mutates the
 list returned by this generic function.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#compute-default-initargs"><b>compute-default-initargs</b></a> (<i>class</i> standard-class)<br>
 <i>Primary Method</i> <a href="dictionary.html#compute-default-initargs"><b>compute-default-initargs</b></a> (<i>class</i> funcallable-standard-class)
@@ -635,19 +635,19 @@ forward referenced class.
 
 <hr><a name="compute-discriminating-function"><i>Generic Function</i> <b>compute-discriminating-function</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#compute-discriminating-function"><b>compute-discriminating-function</b></a> <i>generic-function</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>generic-function</i> argument is a generic function metaobject.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned by this generic function is a function.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function is called to determine the discriminating function for a
 generic function.  When a generic function is called, the <em>installed</em>
@@ -696,7 +696,7 @@ called, and its result installed, by <a href="dictionary.html#add-method"><b>add
 <a href="dictionary.html#remove-method"><b>remove-method</b></a>, <b>initialize-instance</b> and
 <b>reinitialize-instance</b>.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#compute-discriminating-function"><b>compute-discriminating-function</b></a>
          (<i>generic-function</i> standard-generic-function)
@@ -710,11 +710,11 @@ function.
 
 <hr><a name="compute-effective-method"><i>Generic Function</i> <b>compute-effective-method</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#compute-effective-method"><b>compute-effective-method</b></a> <i>generic-function method-combination methods</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>generic-function</i> argument is a generic function metaobject.
 
@@ -722,12 +722,12 @@ function.
 
 <p>The <i>methods</i> argument is a list of method metaobjects.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>This generic function returns two values.  The first is an effective method,
 the second is a list of effective method options.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function is called to determine the effective method from a
 sorted list of method metaobjects.
@@ -750,7 +750,7 @@ effective method options can be found under the description of the <b>define-met
 called by discriminating functions whenever a sorted list of applicable
 methods must be converted to an effective method.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#compute-effective-method"><b>compute-effective-method</b></a>
          (<i>generic-function</i> standard-generic-function)
@@ -766,12 +766,12 @@ method combination type implemented by <i>method-combination</i>.
 
 <hr><a name="compute-effective-slot-definition"><i>Generic Function</i> <b>compute-effective-slot-definition</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#compute-effective-slot-definition"><b>compute-effective-slot-definition</b></a>
 <i> class name direct-slot-definitions</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>class</i> argument is a class metaobject.
 
@@ -781,12 +781,12 @@ method combination type implemented by <i>method-combination</i>.
 slot definition metaobjects.  The most specific direct slot definition
 metaobject appears first in the list.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned by this generic function is an effective slot definition
 metaobject.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function determines the effective slot definition for a slot in a
 class.  It is called by <a href="dictionary.html#compute-slots"><b>compute-slots</b></a> once for each slot accessible in
@@ -806,7 +806,7 @@ are used to initialize the new effective slot definition metaobject.
 See ``Initialization of Slot Definition Metaobjects'' for
 details.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#compute-effective-slot-definition"><b>compute-effective-slot-definition</b></a>
          (<i>class</i> standard-class)
@@ -836,19 +836,19 @@ must be the value returned by this method.
 
 <hr><a name="compute-slots"><i>Generic Function</i> <b>compute-slots</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#compute-slots"><b>compute-slots</b></a> <i>class</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>class</i> argument is a class metaobject.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned is a set of effective slot definition metaobjects.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function computes a set of effective slot definition
 metaobjects for the class <i>class</i>.  The result is a list of
@@ -881,7 +881,7 @@ Protocol.''</a>
 implementation.  The results are undefined if a portable program mutates the
 list returned by this generic function.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#compute-slots"><b>compute-slots</b></a> (<i>class</i> standard-class)
 
@@ -909,21 +909,21 @@ locations.  This method cannot be overridden.
 
 <hr><a name="direct-slot-definition-class"><i>Generic Function</i> <b>direct-slot-definition-class</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><b>direct-slot-definition-class</b> <i>class <b><tt>&amp;rest</tt></b> initargs</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>class</i> argument is a class metaobject.
 
 <p>The <i>initargs</i> argument is a set of initialization arguments and values.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned is a subclass of the class <b>direct-slot-definition</b>.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>When a class is initialized, each of the canonicalized slot specifications must
 be converted to a direct slot definition metaobject.  This generic function is
@@ -932,7 +932,7 @@ called to determine the class of that direct slot definition metaobject.
 <p>The <i>initargs</i> argument is simply the canonicalized slot specification for
 the slot.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <b>direct-slot-definition-class</b>
                (<i>class</i> standard-class)
@@ -954,21 +954,21 @@ the slot.
 
 <hr><a name="effective-slot-definition-class"><i>Generic Function</i> <b>effective-slot-definition-class</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#effective-slot-definition-class"><b>effective-slot-definition-class</b></a> <i>class <b><tt>&amp;rest</tt></b> initargs</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>class</i> argument is a class metaobject.
 
 <p>The <i>initargs</i> argument is a set of initialization arguments and values.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned is a subclass of the class <b>effective-slot-definition</b>.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function is called by <a href="dictionary.html#compute-effective-slot-definition"><b>compute-effective-slot-definition</b></a> to
 determine the class of the resulting effective slot definition metaobject.
@@ -976,7 +976,7 @@ The <i>initargs</i> argument is the set of initialization arguments and values
 that will be passed to <b>make-instance</b> when the effective slot definition
 metaobject is created.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#effective-slot-definition-class"><b>effective-slot-definition-class</b></a>
                (<i>class</i> standard-class)
@@ -998,12 +998,12 @@ metaobject is created.
 
 <hr><a name="ensure-class"><i>Function</i> <b>ensure-class</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#ensure-class"><b>ensure-class</b></a> <i>name</i> <b><tt>&amp;key</tt></b> <b><tt>&amp;allow-other-keys</tt></b>
 
 <p>
-<b>Arguments:</b> 
+<b>Arguments:</b>
 
 <p>The <i>name</i> argument is a symbol.
 
@@ -1012,11 +1012,11 @@ by <a href="dictionary.html#ensure-class-using-class"><b>ensure-class-using-clas
 of the class metaobject (as described in the section called ``Initialization
 of Class Metaobjects'').
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The result is a class metaobject.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This function is called to define or redefine a class with the specified name,
 and can be called by the user or the implementation.  It is the functional
@@ -1045,7 +1045,7 @@ complete set of keyword arguments received by the <a href="dictionary.html#ensur
 
 <hr><a name="ensure-class-using-class"><i>Generic Function</i> <b>ensure-class-using-class</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#ensure-class-using-class"><b>ensure-class-using-class</b></a>
 <i>class name</i> <b><tt>&amp;key</tt></b> <i>direct-default-initargs direct-slots
@@ -1053,7 +1053,7 @@ complete set of keyword arguments received by the <a href="dictionary.html#ensur
                                              metaclass</i>
                             <b><tt>&amp;allow-other-keys</tt></b>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>class</i> argument is a class metaobject or <b>nil</b>.
 
@@ -1072,11 +1072,11 @@ not a proper list.
 <p>For the interpretation of additional keyword arguments, see <a
 href="dictionary.html#class-mo-init">``Initialization of Class Metaobjects''</a>.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The result is a class metaobject.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function is called to define or modify the definition of a named
 class.  It is called by the <a href="dictionary.html#ensure-class"><b>ensure-class</b></a> function.  It can also be
@@ -1131,7 +1131,7 @@ specified by the <b>:metaclass</b> argument, an error is signaled.
 <p>Otherwise, the class metaobject <i>class</i> is redefined by calling the <b>reinitialize-instance</b> generic function with <i>class</i> and the
 initialization arguments.  The <i>class</i> argument is then returned.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#ensure-class-using-class"><b>ensure-class-using-class</b></a>
          (<i>class</i> class)
@@ -1166,12 +1166,12 @@ the <i>class</i> argument is <b>nil</b>.
 
 <hr><a name="ensure-generic-function"><i>Function</i> <b>ensure-generic-function</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><b>ensure-generic-function</b>
        <i>function-name</i> <b><tt>&amp;key</tt></b> <b><tt>&amp;allow-other-keys</tt></b>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>function-name</i> argument is a symbol or a list of the form <b>
 (setf <i>symbol</i>)</b>.
@@ -1182,11 +1182,11 @@ initialization of the generic function metaobject (as described in the section
 called ``Initialization of Generic Function Metaobjects'').
 
 <p>
-<b>Values:</b> 
+<b>Values:</b>
 
 <p>The result is a generic function metaobject.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This function is called to define a globally named generic function or to
 specify or modify options and declarations that pertain to a globally named
@@ -1223,7 +1223,7 @@ complete set of keyword arguments received by <b>ensure-generic-function</b>.
 
 <hr><a name="ensure-generic-function-using-class"><i>Generic Function</i> <b>ensure-generic-function-using-class</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><b>ensure-generic-function-using-class</b>
 <i>generic-function</i>
@@ -1234,7 +1234,7 @@ complete set of keyword arguments received by <b>ensure-generic-function</b>.
 	       method-combination name</i>
 	       <b><tt>&amp;allow-other-keys</tt></b>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>generic-function</i> argument is a generic function metaobject or <b>nil</b>.
 
@@ -1249,11 +1249,11 @@ class, an error is signaled.
 <p>For the interpretation of additional keyword arguments, see <a href="dictionary.html#gf-mo-init">``Initialization
 of Generic Function Metaobjects''</a>.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The result is a generic function metaobject.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>The generic function <b>ensure-generic-function-using-class</b> is called to
 define or modify the definition of a globally named generic function.  It is
@@ -1295,7 +1295,7 @@ the <b>reinitialize-instance</b> generic function with <i>generic-function</i>
 and the initialization arguments.  The <i>generic-function</i> argument is then
 returned.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <b>ensure-generic-function-using-class</b>
          (<i>generic-function</i> generic-function)
@@ -1322,19 +1322,19 @@ form.
 
 <hr><a name="eql-specializer-object"><i>Function</i> <b>eql-specializer-object</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><b>eql-specializer-object</b> <i>eql-specializer</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>eql-specializer</i> argument is an <b>eql</b> specializer metaobject.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned by this function is an object.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This function returns the object associated with <i>eql-specializer</i> during
 initialization.  The value is guaranteed to be <b>eql</b> to the value
@@ -1348,20 +1348,20 @@ specializer.
 
 <hr><a name="extract-lambda-list"><i>Function</i> <b>extract-lambda-list</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><b>extract-lambda-list</b> <i>specialized-lambda-list</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>specialized-lambda-list</i> argument is a specialized lambda list as
 accepted by <b>def-method</b>.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The result is an unspecialized lambda list.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This function takes a specialized lambda list and returns the lambda list with
 the specializers removed.  This is a non-destructive operation.  Whether the
@@ -1372,7 +1372,7 @@ error is signaled.  This syntax checking does not check the syntax of the
 actual specializer names, only the syntax of the lambda list and where the
 specializers appear.
 
-<p><b>Examples:</b> 
+<p><b>Examples:</b>
 
 <p><pre>
 (extract-lambda-list '((p position)))             ==</i> (P)
@@ -1386,20 +1386,20 @@ specializers appear.
 
 <hr><a name="extract-specializer-names"><i>Function</i> <b>extract-specializer-names</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><b>extract-specializer-names</b> <i>specialized-lambda-list</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>specialized-lambda-list</i> argument is a specialized lambda list as
 accepted by <b>def-method</b>.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The result is a list of specializer names.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This function takes a specialized lambda list and returns its specializer
 names.  This is a non-destructive operation.  Whether the result shares
@@ -1415,7 +1415,7 @@ error is signaled.  This syntax checking does not check the syntax of the
 actual specializer names, only the syntax of the lambda list and where the
 specializers appear.
 
-<p><b>Examples:</b> 
+<p><b>Examples:</b>
 
 <p><pre>
 (extract-specializer-names '((p position)))            ==> (POSITION)
@@ -1429,19 +1429,19 @@ specializers appear.
 
 <hr><a name="finalize-inheritance"><i>Generic Function</i> <a href="dictionary.html#finalize-inheritance"><b>finalize-inheritance</b></a></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#finalize-inheritance"><b>finalize-inheritance</b></a> <i>class</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>class</i> argument is a class metaobject.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned by this generic function is unspecified.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function is called to finalize a class metaobject.
 This is described in the Section named <a
@@ -1452,7 +1452,7 @@ Protocol.''</a>
 and the result of calling <b>class-finalized-p</b> on the class metaobject will
 be true.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#finalize-inheritance"><b>finalize-inheritance</b></a> (<i>class</i> standard-class)<br>
 <i>Primary Method</i> <a href="dictionary.html#finalize-inheritance"><b>finalize-inheritance</b></a> (<i>class</i> funcallable-standard-class)
@@ -1468,13 +1468,13 @@ the generic function.
 
 <hr><a name="find-method-combination"><i>Generic Function</i> <b>find-method-combination</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><b>find-method-combination</b> <i>     generic-function
                                          method-combination-type-name
                                          method-combination-options</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>generic-function</i> argument is a generic function metaobject.
 
@@ -1484,17 +1484,17 @@ of method combination.
 <p>The <i>method-combination-options</i> argument is a list of arguments to the
 method combination type.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned by this generic function is a method combination
 metaobject.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function is called to determine the method combination object
 used by a generic function.
 
-<p><b>Notes:</b> 
+<p><b>Notes:</b>
 
 <p>Further details of method combination metaobjects are not specified.
 
@@ -1502,21 +1502,21 @@ used by a generic function.
 
 <hr><a name="funcallable-standard-instance-access"><i>Function</i> <b>funcallable-standard-instance-access</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><b>funcallable-standard-instance-access</b> <i>instance location</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>instance</i> argument is an object.
 
 <p>The <i>location</i> argument is a slot location.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The result of this function is an object.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This function is called to provide direct access to a slot in an instance.  By
 usurping the normal slot lookup protocol, this function is intended to provide
@@ -1581,7 +1581,7 @@ is specified for the result of calls to
 
 <p>During initialization or reinitialization, each initialization argument is
 checked for errors and then associated with the class metaobject.  The value
-can then be accessed by calling the appropriate accessor as shown in 
+can then be accessed by calling the appropriate accessor as shown in
 <a href="dictionary.html#class-mo-initargs">Table 1</a>.
 
 <p>This section begins with a description of the error checking and processing
@@ -1689,7 +1689,7 @@ generic function.  The correspondences are as follows:
 
 <p><table border=yes>
 <caption>
-<a name="class-mo-initargs"><b>Table 1:</b></a> 
+<a name="class-mo-initargs"><b>Table 1:</b></a>
 Initialization arguments and accessors for class metaobjects.
 </caption>
 <tr><th>Initialization Argument  </th><th>Generic Function</th></tr>
@@ -1709,7 +1709,7 @@ classes, all of the initialization arguments default to <b>nil</b>.
 error is signaled if <b>initialize-instance</b> or <b>reinitialize-instance</b>
 are called to initialize or reinitialize a derived instance of the class <b>built-in-class</b>.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p>It is not specified which methods provide the initialization and
 reinitialization behavior described above.  Instead, the information needed to
@@ -1781,7 +1781,7 @@ metaobjects.
 <p>During initialization or reinitialization, each initialization argument is
 checked for errors and then associated with the generic function metaobject.
 The value can then be accessed by calling the appropriate accessor as shown
-in <a href="dictionary.html#gf-mo-initargs">Table 3</a>. 
+in <a href="dictionary.html#gf-mo-initargs">Table 3</a>.
 
 <p>This section begins with a description of the error checking and processing of
 each initialization argument.  This is followed by a table showing the generic
@@ -1866,7 +1866,7 @@ corresponding generic function.  The correspondences are as follows:
 
 <p><table border=yes>
 <caption>
-<a name="gf-mo-initargs"><b>Table 2:</b></a> 
+<a name="gf-mo-initargs"><b>Table 2:</b></a>
 Initialization arguments and accessors for generic function
 metaobjects.
 </caption>
@@ -1880,7 +1880,7 @@ metaobjects.
 <tr><td>:name                      </td><td>generic-function-name          </td></tr>
 </table>
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p>It is not specified which methods provide the initialization and
 reinitialization behavior described above.  Instead, the information needed to
@@ -2021,7 +2021,7 @@ metaobjects.
 
 
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p>It is not specified which methods provide the initialization behavior
 described above.  Instead, the information needed to allow portable programs
@@ -2171,7 +2171,7 @@ metaobjects.
 <tr><td>:documentation          </td><td>documentation                 </td></tr>
 </table>
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p>It is not specified which methods provide the initialization and
 reinitialization behavior described above.  Instead, the information needed to
@@ -2216,24 +2216,24 @@ all of the initialization behavior described above has been completed.
 
 <hr><a name="intern-eql-specializer"><i>Function</i> <b>intern-eql-specializer</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><b>intern-eql-specializer</b> <i>object</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>object</i> argument is any Lisp object.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The result is the <b>eql</b> specializer metaobject for <i>object</i>.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This function returns the unique <b>eql</b> specializer metaobject for <i>object</i>, creating one if necessary.  Two calls to <b>intern-eql-specializer</b>
 with <b>eql</b> arguments will return the same (i.e., <b>eq</b>) value.
 
-<p><b>Notes:</b> 
+<p><b>Notes:</b>
 
 <p>The result of calling <b>eql-specializer-object</b> on the result of a call to
 <b>intern-eql-special-izer</b> is only guaranteed to be <b>eql</b> to the
@@ -2243,27 +2243,27 @@ original <i>object</i> argument, not necessarily <b>eq</b>.
 
 <hr><a name="make-instance"><i>Generic Function</i> <b>make-instance</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><b>make-instance</b> <i>class <b><tt>&amp;rest</tt></b> <i>initargs</i></i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>class</i> argument is a class metaobject or a class name.
 
 <p>The <i>initargs</i> argument is a list of alternating initialization argument
 names and values.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The result is a newly allocated and initialized instance of <i>class</i>.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>The generic function <b>make-instance</b> creates and returns a new instance of
 the given class.  Its behavior and use is described in the CLOS specification.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <b>make-instance</b> (<i>class</i> symbol) <b><tt>&amp;rest</tt></b> <i>initargs</i>
 
@@ -2280,27 +2280,27 @@ CLOS specification section named ``Object Creation and Initialization.''
 
 <hr><a name="make-method-lambda"><i>Generic Function</i> <b>make-method-lambda</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#make-method-lambda"><b>make-method-lambda</b></a> <i>generic-function method lambda-expression environment</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>generic-function</i> argument is a generic function metaobject.
 
-<p>The <i>method</i> argument is a (possibly uninitialized) method metaobject. 
+<p>The <i>method</i> argument is a (possibly uninitialized) method metaobject.
 
 <p>The <i>lambda-expression</i> argument is a lambda expression.
 
 <p>The <i>environment</i> argument is the same as the <b>&amp;environment</b> argument
 to macro expansion functions.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>This generic function returns two values.  The first is a lambda expression,
 the second is a list of initialization arguments and values.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function is called to produce a lambda expression which can
 itself be used to produce a method function for a method and generic function
@@ -2334,7 +2334,7 @@ function must be the value of the <b>:function</b> initialization argument.
 The additional initialization arguments, returned as the second value of this
 generic function, must also be passed in this call to <b>make-instance</b>.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#make-method-lambda"><b>make-method-lambda</b></a> (<i>generic-function</i> standard-generic-function)
                                      (<i>method</i> standard-method)
@@ -2398,21 +2398,21 @@ system's definitions.
 
 <hr><a name="map-dependents"><i>Generic Function</i> <a href="dictionary.html#map-dependents"><b>map-dependents</b></a></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#map-dependents"><b>map-dependents</b></a> <i>metaobject function</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>metaobject</i> argument is a class or generic function metaobject.
 
 <p>The <i>function</i> argument is a function which accepts one argument.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned is unspecified.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function applies <i>function</i> to each of the dependents of <i>metaobject</i>.  The order in which the dependents are processed is not
 specified, but <i>function</i> is applied to each dependent once and only once.
@@ -2421,7 +2421,7 @@ called to alter the dependents of <i>metaobject</i>, it is not specified
 whether the newly added or removed dependent will have <i>function</i> applied
 to it.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#map-dependents"><b>map-dependents</b></a> (<i>metaobject</i> standard-class) <i>function</i>
 
@@ -2462,7 +2462,7 @@ as well:
 <b>remove-dependent (standard-generic-function t)</b>
 </blockquote>
 
-<p><b>Notes:</b> 
+<p><b>Notes:</b>
 
 <p>See the ``Dependent Maintenance Protocol'' section for remarks about the use
 of this facility.
@@ -2586,7 +2586,7 @@ metaobject and is returned by <b>class-slots</b>.
 
 <p>This generic function signals an error if <i>class</i> has not been finalized.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p>The specified methods for the class metaobject reader generic functions are
 presented below.
@@ -2717,7 +2717,7 @@ generic function metaobject during initialization or reinitialization.
 (Also see <a href="dictionary.html#(setf generic-function-name)"><b>(setf
 generic-function-name)</b></a>.)
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p>The specified methods for the generic function metaobject reader generic
 functions are presented below.
@@ -2809,7 +2809,7 @@ slot definition metaobject that defined this method.  This is the value of the
 <b>:slot-definition</b> initialization argument associated with the method
 during initialization.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p>The specified methods for the method metaobject readers are presented below.
 
@@ -2857,7 +2857,7 @@ also signaled if the slot definition metaobject has not been initialized.
 be mutated by the implementation.  The results are undefined if a portable
 program allows such a list to be mutated.
 
-<p><b>Generic Functions:</b> 
+<p><b>Generic Functions:</b>
 
 <p><i>Generic Function</i> <b>slot-definition-allocation</b> <i>slot</i>
 
@@ -2898,7 +2898,7 @@ that was associated with the slot definition metaobject during initialization.
 the defaulted value of the <b>:type</b> initialization argument that was
 associated with the slot definition metaobject during initialization.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p>The specified methods for the slot definition metaobject readers are presented
 below.
@@ -2964,11 +2964,11 @@ and<br> <i>Around Method</i> <a href="dictionary.html#compute-slots"><b>compute-
 
 <hr><a name="reader-method-class"><i>Generic Function</i> <b>reader-method-class</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#reader-method-class"><b>reader-method-class</b></a> <i>class direct-slot <b><tt>&amp;rest</tt></b> <i>initargs</i></i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>class</i> argument is a class metaobject.
 
@@ -2977,11 +2977,11 @@ and<br> <i>Around Method</i> <a href="dictionary.html#compute-slots"><b>compute-
 <p>The <i>initargs</i> argument consists of alternating initialization argument
 names and values.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned is a class metaobject.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function is called to determine the class of reader methods
 created during class initialization and reinitialization.  The result must be
@@ -2990,7 +2990,7 @@ a subclass of <b>standard-reader-method</b>.
 <p>The <i>initargs</i> argument must be the same as will be passed to <b>make-instance</b> to create the reader method.  The <i>initargs</i> must include
 <b>:slot-definition</b> with <i>slot-definition</i> as its value.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#reader-method-class"><b>reader-method-class</b></a>
                (<i>class</i> standard-class)
@@ -3009,21 +3009,21 @@ be overridden.
 
 <hr><a name="remove-dependent"><i>Generic Function</i> <a href="dictionary.html#remove-dependent"><b>remove-dependent</b></a></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#remove-dependent"><b>remove-dependent</b></a> <i>metaobject dependent</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>metaobject</i> argument is a class or generic function metaobject.
 
 <p>The <i>dependent</i> argument is an object.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned by this generic function is unspecified.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function removes <i>dependent</i> from the dependents of <i>metaobject</i>.  If <i>dependent</i> is not one of the dependents of <i>metaobject</i>, no error is signaled.
 
@@ -3034,7 +3034,7 @@ generic function is in progress is unspecified.
 
 <p>The situations in which <a href="dictionary.html#remove-dependent"><b>remove-dependent</b></a> is called are not specified.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#remove-dependent"><b>remove-dependent</b></a>
          (<i>class</i> standard-class) <i>dependent</i>
@@ -3077,7 +3077,7 @@ overridden as well:
 <b>map-dependents (standard-generic-function t)</b>
 </blockquote>
 
-<p><b>Notes:</b> 
+<p><b>Notes:</b>
 
 <p>See the ``Dependent Maintenance Protocol'' section for remarks about the use
 of this facility.
@@ -3086,21 +3086,21 @@ of this facility.
 
 <hr><a name="remove-direct-method"><i>Generic Function</i> <b>remove-direct-method</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#remove-direct-method"><b>remove-direct-method</b></a> <i>specializer method</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>specializer</i> argument is a specializer metaobject.
 
 <p>The <i>method</i> argument is a method metaobject.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned by <a href="dictionary.html#remove-direct-method"><b>remove-direct-method</b></a> is unspecified.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function is called to maintain a set of backpointers from a
 specializer to the set of methods specialized to it.  If <i>method</i> is in
@@ -3117,7 +3117,7 @@ as argument.
 <p>The results are undefined if the <i>specializer</i> argument is not one of the
 specializers of the <i>method</i> argument.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#remove-direct-method"><b>remove-direct-method</b></a>      (<i>specializer</i> class)
                                        (<i>method</i> method)
@@ -3146,21 +3146,21 @@ specified for the generic function.
 
 <hr><a name="remove-direct-subclass"><i>Generic Function</i> <b>remove-direct-subclass</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#remove-direct-subclass"><b>remove-direct-subclass</b></a> <i>superclass subclass</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>superclass</i> argument is a class metaobject.
 
 <p>The <i>subclass</i> argument is a class metaobject.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned by this generic function is unspecified.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function is called to maintain a set of backpointers from a class
 to its direct subclasses.  It removes <i>subclass</i> from the set of direct
@@ -3170,7 +3170,7 @@ not in this set.
 <p>Whenever a class is reinitialized, this generic function is called once with
 each deleted direct superclass of the class.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#remove-direct-subclass"><b>remove-direct-subclass</b></a>  (<i>superclass</i> class)
                                       (<i>subclass</i> class)
@@ -3190,21 +3190,21 @@ as well:
 
 <hr><a name="remove-method"><i>Generic Function</i> <b>remove-method</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#remove-method"><b>remove-method</b></a> <i>generic-function method</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>generic-function</i> argument is a generic function metaobject.
 
 <p>The <i>method</i> argument is a method metaobject.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The <i>generic-function</i> argument is returned.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function breaks the association between a generic function and
 one of its methods.
@@ -3222,7 +3222,7 @@ update the dependents of the generic function.
 <p>The generic function <a href="dictionary.html#remove-method"><b>remove-method</b></a> can be called by the user or the
 implementation.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#remove-method"><b>remove-method</b></a>
               <i>generic-function</i> standard-generic-function)
@@ -3235,22 +3235,22 @@ the generic function.
 
 <hr><a name="set-funcallable-instance-function"><i>Function</i> <b>set-funcallable-instance-function</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#set-funcallable-instance-function"><b>set-funcallable-instance-function</b></a> <i>funcallable-instance function</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>funcallable-instance</i> argument is a funcallable instance (it must
 have been returned by <b>allocate-instance (funcallable-standard-class)</b>).
 
 <p>The <i>function</i> argument is a function.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned by this function is unspecified.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This function is called to set or to change the function of a funcallable
 instance.  After <a href="dictionary.html#set-funcallable-instance-function"><b>set-funcallable-instance-function</b></a> is called, any
@@ -3260,21 +3260,21 @@ subsequent calls to <i>funcallable-instance</i> will run the new function.
 
 <hr><a name="(setf class-name)"><i>Function</i> <a href="dictionary.html#(setf class-name)"><b>(setf class-name)</b></a></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#(setf class-name)"><b>(setf class-name)</b></a> <i>new-name class</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>class</i> argument is a class metaobject.
 
 <p>The <i>new-name</i> argument is any Lisp object.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>This function returns its <i>new-name</i> argument.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This function changes the name of <i>class</i> to <i>new-name</i>.  This value
 is usually a symbol, or <b>nil</b> if the class has no name.
@@ -3286,21 +3286,21 @@ its first argument, the symbol <b>:name</b> as its second argument and <i>new-na
 
 <hr><a name="(setf generic-function-name)"><i>Function</i> <b>(setf generic-function-name)</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><b>(setf generic-function-name)</b> <i>new-name generic-function</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>generic-function</i> argument is a generic function metaobject.
 
 <p>The <i>new-name</i> argument is a function name or <b>nil</b>.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>This function returns its <i>new-name</i> argument.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This function changes the name of <i>generic-function</i> to <i>new-name</i>.
 This value is usually a function name (i.e., a symbol or a list of the form
@@ -3314,11 +3314,11 @@ argument and <i>new-name</i> as its third argument.
 
 <hr><a name="(setf slot-value-using-class)"><i>Generic Function</i> <b>(setf slot-value-using-class)</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><b>(setf slot-value-using-class)</b> <i>new-value class object slot</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>new-value</i> argument is an object.
 
@@ -3328,11 +3328,11 @@ argument and <i>new-name</i> as its third argument.
 
 <p>The <i>slot</i> argument is an effective slot definition metaobject.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>This generic function returns the <i>new-value</i> argument.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>The generic function <b>(setf slot-value-using-class)</b> implements the
 behavior of the <b>(setf slot-value)</b> function. It is called by <b>(setf
@@ -3347,7 +3347,7 @@ previous value is lost.
 <i>object</i> argument, or if the <i>slot</i> argument does not appear among
 the set of effective slots associated with the <i>class</i> argument.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <b>(setf slot-value-using-class)</b>  <i>new-value</i>
                                             (<i>class</i> standard-class)
@@ -3377,11 +3377,11 @@ methods in the standard implementation of the slot access protocol.
 
 <hr><a name="slot-boundp-using-class"><i>Generic Function</i> <b>slot-boundp-using-class</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><b>slot-boundp-using-class</b> <i>class object slot</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>class</i> argument is a class metaobject.  It is the class of the <i>object</i> argument.
 
@@ -3389,11 +3389,11 @@ methods in the standard implementation of the slot access protocol.
 
 <p>The <i>slot</i> argument is an effective slot definition metaobject.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>This generic function returns true or false.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function implements the behavior of the <b>slot-boundp</b>
 function.  It is called by <b>slot-boundp</b> with the class of <i>object</i> as
@@ -3407,7 +3407,7 @@ slot in an instance is bound.
 <i>object</i> argument, or if the <i>slot</i> argument does not appear among
 the set of effective slots associated with the <i>class</i> argument.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <b>slot-boundp-using-class</b> (<i>class</i> standard-class)
                                      <i>object</i>
@@ -3430,7 +3430,7 @@ methods in the standard implementation of the slot access protocol.
 
 <p>This method signals an error.
 
-<p><b>Notes:</b> 
+<p><b>Notes:</b>
 
 <p>In cases where the class metaobject class does not distinguish unbound slots,
 true should be returned.
@@ -3451,11 +3451,11 @@ true should be returned.
 
 <hr><a name="slot-makunbound-using-class"><i>Generic Function</i> <b>slot-makunbound-using-class</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><b>slot-makunbound-using-class</b> <i>class object slot</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>class</i> argument is a class metaobject.  It is the class of the <i>object</i> argument.
 
@@ -3463,11 +3463,11 @@ true should be returned.
 
 <p>The <i>slot</i> argument is an effective slot definition metaobject.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>This generic function returns its <i>object</i> argument.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function implements the behavior of the <b>slot-makunbound</b>
 function.  It is called by <b>slot-makunbound</b> with the class of <i>object</i> as its first argument and the pertinent effective slot definition
@@ -3481,7 +3481,7 @@ its unbound state'' depends on the class metaobject class.
 <i>object</i> argument, or if the <i>slot</i> argument does not appear among the
 set of effective slots associated with the <i>class</i> argument.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <b>slot-makunbound-using-class</b>
                (<i>class</i> standard-class)
@@ -3512,11 +3512,11 @@ methods in the standard implementation of the slot access protocol.
 
 <hr><a name="slot-value-using-class"><i>Generic Function</i> <b>slot-value-using-class</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><b>slot-value-using-class</b> <i>class object slot</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>class</i> argument is a class metaobject.  It is the class of the <i>object</i> argument.
 
@@ -3524,11 +3524,11 @@ methods in the standard implementation of the slot access protocol.
 
 <p>The <i>slot</i> argument is an effective slot definition metaobject.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned by this generic function is an object.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function implements the behavior of the <b>slot-value</b>
 function.  It is called by <b>slot-value</b> with the class of <i>object</i> as
@@ -3542,7 +3542,7 @@ in the given slot of the given object.  If the slot is unbound <b>slot-unbound</
 <i>object</i> argument, or if the <i>slot</i> argument does not appear among
 the set of effective slots associated with the <i>class</i> argument.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <b>slot-value-using-class</b>      (<i>class</i> standard-class)
                                          <i>object</i>
@@ -3569,20 +3569,20 @@ methods in the standard implementation of the slot access protocol.
 
 <hr><a name="specializer-direct-generic-functions"><i>Generic Function</i> <b>specializer-direct-generic-functions</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><b>specializer-direct-generic-functions</b> <i>specializer</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>specializer</i> argument is a specializer metaobject.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The result of this generic function is a possibly empty list of generic
 function metaobjects.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function returns the possibly empty set of those
 generic functions which have a method with <i>specializer</i> as a
@@ -3591,7 +3591,7 @@ metaobjects.  This value is maintained by the generic functions <a
 href="dictionary.html#add-direct-method"><b>add-direct-method</b></a> and
 <a href="dictionary.html#remove-direct-method"><b>remove-direct-method</b></a>.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <b>specializer-direct-generic-functions</b> (<i>specializer</i> class)
 
@@ -3616,20 +3616,20 @@ the generic function.
 
 <hr><a name="specializer-direct-methods"><i>Generic Function</i> <b>specializer-direct-methods</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><b>specializer-direct-methods</b> <i>specializer</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>specializer</i> argument is a specializer metaobject.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The result of this generic function is a possibly empty list of method
 metaobjects.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function returns the possibly empty set of those
 methods, connected to generic functions, which have <i>specializer</i>
@@ -3638,7 +3638,7 @@ This value is maintained by the generic functions <a
 href="dictionary.html#add-direct-method"><b>add-direct-method</b></a> and
 <a href="dictionary.html#remove-direct-method"><b>remove-direct-method</b></a>.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <b>specializer-direct-methods</b> (<i>specializer</i> class)
 
@@ -3663,21 +3663,21 @@ the generic function.
 
 <hr><a name="standard-instance-access"><i>Function</i> <b>standard-instance-access</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><b>standard-instance-access</b> <i>instance location</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>instance</i> argument is an object.
 
 <p>The <i>location</i> argument is a slot location.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The result of this function is an object.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This function is called to provide direct access to a slot in an instance.  By
 usurping the normal slot lookup protocol, this function is intended to provide
@@ -3703,11 +3703,11 @@ accessible slots of the instance's class.
 
 <hr><a name="update-dependent"><i>Generic Function</i> <a href="dictionary.html#update-dependent"><b>update-dependent</b></a></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><a href="dictionary.html#update-dependent"><b>update-dependent</b></a> <i>metaobject dependent</i> <b><tt>&amp;rest</tt></b> <i>initargs</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>metaobject</i> argument is a class or generic function metaobject.  It
 is the metaobject being reinitialized or otherwise modified.
@@ -3717,11 +3717,11 @@ is the metaobject being reinitialized or otherwise modified.
 <p>The <i>initargs</i> argument is a list of the initialization arguments for
 the metaobject redefinition.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned by <a href="dictionary.html#update-dependent"><b>update-dependent</b></a> is unspecified.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function is called to update a dependent of <i>metaobject</i>.
 
@@ -3751,11 +3751,11 @@ dependents when a method is added could be performed by the following code:
                                        <em> new-method</em>
 </pre>
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p>There are no specified methods on this generic function.
 
-<p><b>Notes:</b> 
+<p><b>Notes:</b>
 
 <p>See the ``Dependent Maintenance Protocol'' section for remarks about the use
 of this facility.
@@ -3764,21 +3764,21 @@ of this facility.
 
 <hr><a name="validate-superclass"><i>Generic Function</i> <b>validate-superclass</b></a>
 
-<p><b>Syntax:</b> 
+<p><b>Syntax:</b>
 
 <p><b>validate-superclass</b> <i>class superclass</i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>class</i> argument is a class metaobject.
 
 <p>The <i>superclass</i> argument is a class metaobject.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>This generic function returns true or false.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function is called to determine whether the class <i>superclass</i> is suitable for use as a superclass of <i>class</i>.
 
@@ -3787,7 +3787,7 @@ is called during class metaobject initialization and reinitialization, before
 the direct superclasses are stored.  If this generic function returns false,
 the initialization or reinitialization will signal an error.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <b>validate-superclass</b>      (<i>class</i> class)
                                       (<i>superclass</i> class)
@@ -3810,7 +3810,7 @@ the class of the other is <b>funcallable-standard-class</b>.
 
 <p>This method can be overridden.
 
-<p><b>Notes:</b> 
+<p><b>Notes:</b>
 
 <p>Defining a method on <b>validate-superclass</b> requires detailed knowledge of
 of the internal protocol followed by each of the two class metaobject classes.
@@ -3824,7 +3824,7 @@ class metaobject classes declares that they are compatible.
 
 <p><a href="dictionary.html#writer-method-class"><b>writer-method-class</b></a> <i>class direct-slot <b><tt>&amp;rest</tt></b> <i>initargs</i></i>
 
-<p><b>Arguments:</b> 
+<p><b>Arguments:</b>
 
 <p>The <i>class</i> argument is a class metaobject.
 
@@ -3833,11 +3833,11 @@ class metaobject classes declares that they are compatible.
 <p>The <i>initargs</i> argument is a list of initialization arguments and
 values.
 
-<p><b>Values:</b> 
+<p><b>Values:</b>
 
 <p>The value returned is a class metaobject.
 
-<p><b>Purpose:</b> 
+<p><b>Purpose:</b>
 
 <p>This generic function is called to determine the class of writer methods
 created during class initialization and reinitialization.  The result must be
@@ -3846,7 +3846,7 @@ a subclass of <b>standard-writer-method</b>.
 <p>The <i>initargs</i> argument must be the same as will be passed to <b>make-instance</b> to create the reader method.  The <i>initargs</i> must include
 <b>:slot-definition</b> with <i>slot-definition</i> as its value.
 
-<p><b>Methods:</b> 
+<p><b>Methods:</b>
 
 <p><i>Primary Method</i> <a href="dictionary.html#writer-method-class"><b>writer-method-class</b></a>
                (<i>class</i> standard-class)
